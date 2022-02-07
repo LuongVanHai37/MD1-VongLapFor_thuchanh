@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>JavaScript Loops</h1>
+<p id="demo"></p>
+<script>
+    let text = "";
+    for (let i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    document.write('<h1>Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.</h1>')
+    let num = prompt("Enter your number: ");
+    let total = 0;
+    for (let i = 1; i <= num; i += 1) {
+        total = total + i;
+    }
+    document.write(total);
+    document.write('<h1>[Thực hành] Sử dụng vòng lặp lồng nhau</h1>')
+    let sout;
+    sout = "<table border='1' width='300' cellSpacing='0' cellPadding='3'>"
+    for (i = 1; i <= 10; i++) {
+        sout = sout + "<tr>";
+        for (j = 1; j <= 10; j++) {
+            sout = sout + "<td>" + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+    document.write('<h1>[Thực hành] Vừng ơi mở ra</h1>')
+    let password = "Vung oi mo ra";
+    let input;
+    do {
+        input = prompt("Nhap cau than chu");
+    } while (input !== password);
+  document.write("Mo cua thanh cong!");
+
+</script>
+</body>
+</html>
